@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="ProdFlow: We engineer products that dominate. Elite digital engineering, minimalist dark aesthetic.">
+  <title>ProdFlow | Elite Digital Engineering</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="https://code.iconify.design/iconify-icon/1.0.7/iconify-icon.min.js"></script>
+</head>
+<body>
+
+  <!-- Navigation Header -->
+  <header>
+    <div class="logo-container">
+      <div class="logo-text">PRODFLOW</div>
+      <div class="logo-bar"></div>
+    </div>
+    <nav>
+      <ul>
+        <li><a href="#philosophy">Philosophy</a></li>
+        <li><a href="#work">Work</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <button class="cta-button">Inquire Now</button>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-content">
+      <span class="location-tag">New York / Global</span>
+      <h1 class="hero-title serif-italic">
+        We engineer products that <span class="accent">dominate</span>
+      </h1>
+      <div class="hero-buttons">
+        <a href="#work" class="btn btn-primary">View Work</a>
+        <a href="#contact" class="btn btn-secondary">Contact Us</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Feature/Philosophy Grid -->
+  <section id="philosophy" class="features-section">
+    <div class="features-grid">
+      <div class="feature-card">
+        <iconify-icon icon="ph:cpu-bold" class="feature-icon"></iconify-icon>
+        <h3 class="feature-title sans-body">Technical Precision</h3>
+        <p class="feature-text">Our engineering standards are built on a non-negotiable foundation of scale, security, and uncompromising performance.</p>
+      </div>
+      <div class="feature-card">
+        <iconify-icon icon="ph:bezier-curve-bold" class="feature-icon"></iconify-icon>
+        <h3 class="feature-title sans-body">Algorithmic Design</h3>
+        <p class="feature-text">Every interaction is calibrated using exact bezier curves and inverted contrast constraints for a flawless user experience.</p>
+      </div>
+      <div class="feature-card">
+        <iconify-icon icon="ph:rocket-launch-bold" class="feature-icon"></iconify-icon>
+        <h3 class="feature-title sans-body">Rapid Deployment</h3>
+        <p class="feature-text">We iterate at the speed of thought. Zero fluff, zero downtime. Pure continuous integration resulting in immediate market dominance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Case Study Sections -->
+  <section id="work" class="case-studies">
+    
+    <!-- Case Study 1: Image-Text -->
+    <article class="case-study">
+      <div class="image-container">
+        <img src="assets/onyx.png" alt="Onyx Infrastructure Technical Representation" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;">
+      </div>
+      <div class="text-container">
+        <h2 class="case-title serif-italic">Onyx Infrastructure</h2>
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-value serif-italic">99.9%</div>
+            <div class="metric-label">Uptime Delivered</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value serif-italic">40ms</div>
+            <div class="metric-label">Reduced Latency</div>
+          </div>
+        </div>
+        <a href="#" class="view-link">
+          View Case Study 
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+    <!-- Case Study 2: Text-Image (Inverted) -->
+    <article class="case-study inverted">
+      <div class="image-container">
+        <img src="assets/nexus.png" alt="Nexus Financial Technical Representation" style="width: 100%; height: 100%; object-fit: cover; opacity: 0.7;">
+      </div>
+      <div class="text-container">
+        <h2 class="case-title serif-italic">Nexus Financial</h2>
+        <div class="metrics-grid">
+          <div class="metric-card">
+            <div class="metric-value serif-italic">$2B+</div>
+            <div class="metric-label">Volume Processed</div>
+          </div>
+          <div class="metric-card">
+            <div class="metric-value serif-italic">Zero</div>
+            <div class="metric-label">Security Breaches</div>
+          </div>
+        </div>
+        <a href="#" class="view-link">
+          View Case Study 
+          <span class="arrow">→</span>
+        </a>
+      </div>
+    </article>
+
+  </section>
+
+  <!-- Inverted Contact Section -->
+  <section id="contact" class="contact-section">
+    <div class="contact-container">
+      <h2 class="contact-title serif-italic">Initiate<br>Sequence.</h2>
+      
+      <div class="contact-form">
+        <form onsubmit="event.preventDefault();">
+          <div class="form-group">
+            <input type="text" id="name" class="form-input" placeholder=" ">
+            <label for="name" class="form-label">Full Name</label>
+          </div>
+          
+          <div class="form-group">
+            <input type="email" id="email" class="form-input" placeholder=" ">
+            <label for="email" class="form-label">Email Address</label>
+          </div>
+          
+          <div class="form-group">
+            <input type="text" id="subject" class="form-input" placeholder=" ">
+            <label for="subject" class="form-label">Project Scope</label>
+          </div>
+          
+          <button type="submit" class="submit-btn">Initialize Connection</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+</body>
+</html>
