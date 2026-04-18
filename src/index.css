@@ -164,7 +164,7 @@ nav a:hover {
   display: flex;
   align-items: center;
   padding: 160px 40px 80px;
-  background: linear-gradient(to right, var(--color-black) 70%, var(--color-charcoal) 70%);
+  background-color: var(--color-black);
 }
 
 .hero-content {
