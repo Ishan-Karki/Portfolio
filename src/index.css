@@ -162,15 +162,37 @@ nav a:hover {
   min-height: 100vh;
   position: relative;
   display: flex;
+  justify-content: space-between;
   align-items: center;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
   padding: 160px 40px 80px;
   background-color: var(--color-black);
 }
 
 .hero-content {
-  max-width: 1200px;
+  flex: 1;
   position: relative;
   z-index: 2;
+}
+
+.hero-globe-wrapper {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+  padding-left: 40px;
+}
+
+.hero-description {
+  color: rgba(255, 255, 255, 0.6);
+  max-width: 600px;
+  margin-bottom: 48px;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  line-height: 1.6;
 }
 
 .location-tag {
@@ -184,9 +206,9 @@ nav a:hover {
 }
 
 .hero-title {
-  font-size: clamp(80px, 8vw, 120px);
+  font-size: clamp(60px, 7vw, 100px);
   line-height: 1;
-  margin-bottom: 64px;
+  margin-bottom: 48px;
   max-width: 900px;
 }
 
@@ -464,10 +486,107 @@ nav a:hover {
   color: var(--color-black);
 }
 
+/* Showcase Cards (Clean Minimalist List) */
+.showcase-card {
+  display: block;
+  background-color: #161616;
+  border-radius: 24px !important;
+  overflow: hidden;
+  text-decoration: none;
+  color: var(--color-white);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.15); /* Glossy top edge */
+  transition: transform 0.4s var(--transition-bezier), box-shadow 0.4s var(--transition-bezier), border-color 0.4s ease;
+  position: relative;
+  margin-bottom: 40px;
+}
+
+.showcase-card:hover {
+  transform: translateY(-4px);
+  border-color: rgba(199, 255, 159, 0.3);
+  box-shadow: inset 0 1px 1px rgba(199, 255, 159, 0.4), 0 16px 40px rgba(0, 0, 0, 0.6);
+}
+
+.showcase-card:hover .showcase-arrow {
+  transform: translateX(8px);
+  color: var(--color-lime);
+}
+
+.showcase-header {
+  padding: 48px 48px 0 48px;
+}
+
+.showcase-title-row {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 16px;
+}
+
+.showcase-title {
+  font-size: 36px;
+  font-weight: 500;
+  letter-spacing: -0.02em;
+  font-family: var(--font-sans);
+  margin: 0;
+}
+
+.showcase-arrow {
+  font-size: 32px;
+  color: rgba(255, 255, 255, 0.8);
+  transition: transform 0.4s var(--transition-bezier), color 0.4s ease;
+}
+
+.showcase-description {
+  font-size: 20px;
+  line-height: 1.5;
+  color: rgba(255, 255, 255, 0.5);
+  font-family: var(--font-sans);
+  max-width: 600px;
+}
+
+.showcase-highlight {
+  font-weight: 700;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.showcase-image-wrapper {
+  margin-top: 48px;
+  padding: 0 48px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.showcase-image {
+  width: 100%;
+  border-top-left-radius: 12px !important;
+  border-top-right-radius: 12px !important;
+  border: 1px solid rgba(255,255,255,0.05);
+  border-bottom: none;
+  box-shadow: 0 -8px 30px rgba(0,0,0,0.5);
+  object-fit: cover;
+  display: block;
+}
+
 /* Responsive */
 @media (max-width: 1024px) {
+  .hero-globe-wrapper {
+    display: none;
+  }
+  .hero {
+    flex-direction: column;
+    justify-content: center;
+    padding: 140px 40px 60px;
+    background: var(--color-black);
+  }
+  .hero-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
   .hero-title, .contact-title {
-    font-size: 80px;
+    font-size: 72px;
   }
   .features-grid {
     grid-template-columns: 1fr;
@@ -484,13 +603,30 @@ nav a:hover {
   .contact-container {
     grid-template-columns: 1fr;
   }
-  .hero {
-    background: var(--color-black); /* Remove split on mobile */
-  }
 }
 @media (max-width: 768px) {
-  .hero-title, .contact-title {
-    font-size: 60px;
+  .hero {
+    padding: 140px 20px 60px;
+  }
+  .hero-content {
+    justify-content: center;
+    gap: 60px; /* Expands elements vertically within the hero section */
+  }
+  .hero-title {
+    font-size: clamp(56px, 15vw, 80px); /* Slightly larger for better mobile presence */
+    margin-bottom: 0;
+  }
+  .contact-title {
+    font-size: 48px;
+  }
+  .location-tag {
+    font-size: 12px;
+    margin-bottom: 0;
+    letter-spacing: 0.25em;
+  }
+  .hero-description {
+    font-size: 18px;
+    line-height: 1.8;
   }
   header {
     padding: 0 20px;
@@ -498,4 +634,18 @@ nav a:hover {
   nav ul {
     display: none; /* Hide nav links on mobile for simplicity */
   }
+  .showcase-header {
+    padding: 32px 32px 0 32px;
+  }
+  .showcase-title {
+    font-size: 28px;
+  }
+  .showcase-description {
+    font-size: 16px;
+  }
+  .showcase-image-wrapper {
+    margin-top: 32px;
+    padding: 0 24px;
+  }
 }
+
