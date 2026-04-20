@@ -1,19 +1,8 @@
 export const Features = () => (
   <section id="about" className="about-section" style={{ padding: '80px 40px', maxWidth: '800px', margin: '0 auto' }}>
-    <div className="about-image-wrapper" style={{ marginBottom: '48px', position: 'relative' }}>
-      <img 
-        src="https://images.unsplash.com/photo-1550751827-4bd374c3f58b?auto=format&fit=crop&q=80&w=1200" 
-        alt="Digital Craftsmanship" 
-        style={{ 
-          width: '100%', 
-          height: '400px', 
-          objectFit: 'cover', 
-          borderRadius: '24px', 
-          border: '1px solid rgba(255,255,255,0.05)',
-          boxShadow: '0 16px 40px rgba(0,0,0,0.5)'
-        }} 
-      />
-    </div>
+    <h2 className="section-title serif-italic" style={{ fontSize: 'clamp(60px, 6vw, 100px)', marginBottom: '48px', borderBottom: '1px solid rgba(255,255,255,0.1)', paddingBottom: '24px' }}>
+      About Me
+    </h2>
 
     <div className="about-content">
       <h2 style={{ fontSize: '32px', fontWeight: '500', marginBottom: '32px', letterSpacing: '-0.02em', fontFamily: 'var(--font-sans)', color: '#fff' }}>
