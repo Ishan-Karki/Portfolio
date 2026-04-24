@@ -612,6 +612,9 @@ nav a:hover {
     justify-content: center;
     gap: 60px; /* Expands elements vertically within the hero section */
   }
+  .contact-form {
+    display: none;
+  }
   .hero-title {
     font-size: clamp(56px, 15vw, 80px); /* Slightly larger for better mobile presence */
     margin-bottom: 0;

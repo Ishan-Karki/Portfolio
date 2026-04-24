@@ -1,6 +1,6 @@
 export const Contact = () => (
   <section id="contact" className="contact-section">
-    <div className="contact-container" style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '80px', maxWidth: '1400px', margin: '0 auto' }}>
+    <div className="contact-container">
       
       <div className="contact-info">
         <h2 className="contact-title serif-italic" style={{ marginBottom: '16px', fontSize: 'clamp(80px, 8vw, 120px)', lineHeight: 1 }}>
@@ -47,7 +47,7 @@ export const Contact = () => (
             <label htmlFor="subject" className="form-label">How can I help?</label>
           </div>
           
-          <button type="submit" className="submit-btn" style={{ width: '100%' }}>Send Message</button>
+          <button type="submit" className="submit-btn">Send Message</button>
         </form>
       </div>
     </div>
